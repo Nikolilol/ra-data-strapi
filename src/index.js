@@ -115,7 +115,7 @@ export default (apiUrl, httpClient = fetchUtils.fetchJson) => {
                     };
                  });
             case CREATE:
-                return { data: { ...params.data, id: json.id } };
+                return { data: { ...params.data, id: json.id, json } };
             default:
                 return { data: json };
         }
